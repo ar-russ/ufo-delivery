@@ -1,0 +1,11 @@
+alembic
+aiomysql
+cryptography
+fastapi
+sqlalchemy
+passlib[bcrypt]
+pip-tools
+pydantic-settings
+python-multipart
+pyjwt
+uvicorn
