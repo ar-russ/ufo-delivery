@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends
-from fastapi.responses import JSONResponse
 
 from src.models.dto.users import (
     LoginCredentials,
