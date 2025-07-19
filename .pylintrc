@@ -452,6 +452,7 @@ disable=raw-checker-failed,
         too-few-public-methods,
         import-error,
         singleton-comparison,
+        cyclic-import,
 
 
 # Enable the message, report, category or checker with the given id(s). You can
