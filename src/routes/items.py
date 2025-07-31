@@ -32,7 +32,7 @@ async def get_items(
     return items
 
 
-@router.get("/categories", summary="Get Items")
+@router.get("/categories", summary="Get Categories")
 async def get_categories(
         item_service: ItemService = Depends(get_item_service),
 ) -> list[CategoryDTO]:
