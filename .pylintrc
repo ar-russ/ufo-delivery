@@ -53,8 +53,8 @@ ignore=CVS,
        docker-compose.yaml,
        alembic,
        README.md,
-       requirements.in,
-       requirements.txt,
+       pyproject.toml,
+       uv.lock,
 
 # Add files or directories matching the regular expressions patterns to the
 # ignore-list. The regex matches against paths and can be in Posix or Windows
