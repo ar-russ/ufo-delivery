@@ -40,7 +40,7 @@ Authenticate user and retrieve a JWT Access Token.
 
 | URL           | Method | Requires auth | Requires superuser rights |
 |---------------|--------|---------------|---------------------------|
-| _/user/login_ | POST   | No            | No                        |
+| _/auth/login_ | POST   | No            | No                        |
 
 Request body:
 ```json
@@ -56,6 +56,8 @@ Response:
     "token_type": "bearer"
 }
 ```
+
+## User Endpoints
 
 ### Create new user
 
@@ -87,8 +89,6 @@ Response:
     "is_superuser": false
 }
 ```
-
-## User Endpoints
 
 ### User Information
 Get current user's information.

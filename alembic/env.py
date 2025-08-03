@@ -7,7 +7,7 @@ load_dotenv(find_dotenv())
 
 from alembic import context
 
-from src.models.db import *
+from ufo_delivery.models.db import *
 from config.config import settings
 
 # this is the Alembic Config object, which provides
