@@ -12,10 +12,12 @@ dispathes the delivery to the user.
 
 ## Tech Stack
 
-- FastAPI
-- SQLAlchemy + Alembic
-- MySQL
-- Docker
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
+- [Alembic](https://alembic.sqlalchemy.org/en/latest/)
+- [MySQL](https://www.mysql.com/)
+- [Docker](https://www.docker.com/)
+- [uv](https://github.com/astral-sh/uv)
 
 ## Documentation
 

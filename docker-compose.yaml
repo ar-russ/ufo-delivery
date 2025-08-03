@@ -9,7 +9,8 @@ services:
     ports:
       - "${APP_PORT}:8080"
     volumes:
-      - .:/app
+      - ./src:/app/src
+      - ./main.py:/app/main.py
   db:
     image: mysql:9.3
     ports:
