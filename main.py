@@ -7,7 +7,11 @@ from config.config import settings
 
 
 def build_app() -> FastAPI:
-    app = FastAPI()
+    app = FastAPI(
+        title="UFO Delivery",
+        description="🍟 FastAPI backend service for a simple operator-assisted food delivery",
+        version="0.1.0",
+    )
 
     app.include_router(items.router)
     app.include_router(users.router)

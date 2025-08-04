@@ -2,7 +2,7 @@ from jwt import decode
 from jwt.exceptions import InvalidTokenError
 
 from fastapi import Depends
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 from ufo_delivery.models.dto.users import UserDTO
 from ufo_delivery.core.dependencies.services.user_service import get_user_service
@@ -10,11 +10,11 @@ from ufo_delivery.services.user_service import UserService
 from ufo_delivery.core.exceptions import InvalidCredentialsException, InsufficientRightsException
 from config.config import settings
 
-scheme_factory = OAuth2PasswordBearer(tokenUrl="/user/login")
+scheme_factory = HTTPBearer(auto_error=False)
 
 
 async def get_current_user(
-        token: str = Depends(scheme_factory),
+        token: HTTPAuthorizationCredentials = Depends(scheme_factory),
         user_service: UserService = Depends(get_user_service)
 ) -> UserDTO:
     """
@@ -26,7 +26,7 @@ async def get_current_user(
     """
     try:
         decoded_token = decode(
-            token,
+            token.credentials,
             key=settings.auth.secret_key,
             algorithms=[settings.auth.algorithm]
         )
