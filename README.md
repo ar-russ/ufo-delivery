@@ -1,3 +1,8 @@
+
+<p align="center">
+	<img width="200px" src="https://github.com/ar-russ/ufo-delivery/blob/main/docs/logo.png?raw=true" alt="logo"/>
+</p>
+
 # 🍟 UFO Delivery
 
 A FastAPI-based project to explore and implement the Three-Tier-Architecture.
